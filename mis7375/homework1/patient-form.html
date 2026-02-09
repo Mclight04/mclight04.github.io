@@ -1,0 +1,167 @@
+<!--
+Program name: patient-form.html
+Author: Myles Carpenter
+Date created: 02/06/2026
+Date last edited: 02/09/2026
+Version: 1.0
+Description: Beginner patient registration form for a medical website.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Registration</title>
+  <link rel="stylesheet" href="style.css">
+ <script>
+    function showDate() {
+      var today = new Date();
+      document.getElementById("today").innerHTML = today.toDateString();
+    }
+   
+  </script>
+</head>
+
+<body onload="showDate()">
+
+<div id="header">
+  <img src="logo.png" alt="Medical Logo" id="logo">
+  <h1>WeRD Docs Medical</h1>
+  <p>Today is: <span id="today"></span></p>
+</div>
+
+<form action="thankyou.html">
+
+<table>
+
+<tr>
+<td>Name</td>
+<td>
+First
+<input type="text" maxlength="30">
+MI
+<input type="text" maxlength="1">
+Last
+<input type="text" maxlength="30">
+</td>
+</tr>
+
+<tr>
+<td>Date of Birth</td>
+<td><input type="text" placeholder="MM/DD/YYYY"></td>
+</tr>
+
+<tr>
+<td>Social Security</td>
+<td><input type="password" maxlength="11"></td>
+</tr>
+
+<tr>
+<td>Address</td>
+<td>
+<input type="text" maxlength="30"><br>
+<input type="text" maxlength="30">
+</td>
+</tr>
+
+<tr>
+<td>City State Zip</td>
+<td>
+<input type="text" maxlength="30">
+<select>
+<option>TX</option>
+<option>CA</option>
+<option>NY</option>
+<option>FL</option>
+<option>MI</option>
+<option>OH</option>
+<option>PA</option>
+<option>IL</option>
+<option>DC</option>
+<option>PR</option>
+</select>
+<input type="text" maxlength="10">
+</td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email"></td>
+</tr>
+
+<tr>
+<td>User ID</td>
+<td><input type="text" maxlength="20"></td>
+</tr>
+
+<tr>
+<td>Password</td>
+<td>
+<input type="password"><br>
+<input type="password">
+</td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td>
+<input type="radio"> Male
+<input type="radio"> Female
+<input type="radio"> Other
+</td>
+</tr>
+
+<tr>
+<td>Vaccinated</td>
+<td>
+<input type="radio"> Yes
+<input type="radio"> No
+</td>
+</tr>
+
+<tr>
+<td>Insurance</td>
+<td>
+<input type="radio"> Yes
+<input type="radio"> No
+</td>
+</tr>
+
+<tr>
+<td>Medical History</td>
+<td>
+<input type="checkbox"> Chicken Pox
+<input type="checkbox"> Measles
+<input type="checkbox"> Covid
+<input type="checkbox"> Tetanus
+<input type="checkbox"> Flu
+</td>
+</tr>
+
+<tr>
+<td>Health Rating</td>
+<td><input type="range" min="1" max="10"></td>
+</tr>
+
+<tr>
+<td>Symptoms</td>
+<td><textarea rows="3" cols="50"></textarea></td>
+</tr>
+
+<tr>
+<td colspan="2" align="center">
+<input type="reset" value="CLEAR AND START OVER">
+<input type="submit" value="Submit">
+</td>
+</tr>
+
+</table>
+</form>
+
+<div id="footer">
+<button>Contact Us</button>
+<p>WeRD Docs Medical | Sugar Land TX</p>
+</div>
+
+</body>
+</html>
