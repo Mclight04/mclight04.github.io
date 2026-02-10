@@ -10,201 +10,214 @@ Description: Beginner patient registration form for a medical website.
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Patient Registration</title>
-  <link rel="stylesheet" href="style.css">
- <script>
-    function showDate() {
-      var today = new Date();
-      document.getElementById("today").innerHTML = today.toDateString();
-    }
-   
-  </script>
+    <meta charset="UTF-8">
+    <title>Patient Registration</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        function showDate() {
+            var today = new Date();
+            document.getElementById("today").innerHTML = today.toDateString();
+        }
+    </script>
 </head>
 
 <body onload="showDate()">
 
-<div id="header">
-  <img src="logo.png" alt="Medical Logo" id="logo">
-  <h1>Magic Myles Medical</h1>
-  <p>Today is: <span id="today"></span></p>
-</div>
+    <div id="header">
+        <img src="logo.png" alt="Medical Logo" id="logo">
+        <h1>Magic Myles Medical</h1>
+        <p>Today is: <span id="today"></span></p>
+    </div>
 
-<form action="thankyou.html">
+    <form action="thankyou.html">
+        <table>
 
-<table>
+            <tr>
+                <td>Name</td>
+                <td>
+                    First
+                    <input type="text" maxlength="30">
+                    MI
+                    <input type="text" maxlength="1">
+                    Last
+                    <input type="text" maxlength="30">
+                </td>
+            </tr>
 
-<tr>
-<td>Name</td>
-<td>
-First
-<input type="text" maxlength="30">
-MI
-<input type="text" maxlength="1">
-Last
-<input type="text" maxlength="30">
-</td>
-</tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td>
+                    <input type="text" placeholder="MM/DD/YYYY">
+                </td>
+            </tr>
 
-<tr>
-<td>Date of Birth</td>
-<td><input type="text" placeholder="MM/DD/YYYY"></td>
-</tr>
+            <tr>
+                <td>Social Security</td>
+                <td>
+                    <input type="password" maxlength="11">
+                </td>
+            </tr>
 
-<tr>
-<td>Social Security</td>
-<td><input type="password" maxlength="11"></td>
-</tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <input type="text" maxlength="30"><br>
+                    <input type="text" maxlength="30">
+                </td>
+            </tr>
 
-<tr>
-<td>Address</td>
-<td>
-<input type="text" maxlength="30"><br>
-<input type="text" maxlength="30">
-</td>
-</tr>
+            <tr>
+                <td>City State Zip</td>
+                <td>
+                    <input type="text" maxlength="30">
 
-<tr>
-<td>City State Zip</td>
-<td>
-<input type="text" maxlength="30">
-<select>
-  <option value="">Select State</option>
-  <option>AL</option>
-  <option>AK</option>
-  <option>AZ</option>
-  <option>AR</option>
-  <option>CA</option>
-  <option>CO</option>
-  <option>CT</option>
-  <option>DE</option>
-  <option>DC</option>
-  <option>FL</option>
-  <option>GA</option>
-  <option>HI</option>
-  <option>ID</option>
-  <option>IL</option>
-  <option>IN</option>
-  <option>IA</option>
-  <option>KS</option>
-  <option>KY</option>
-  <option>LA</option>
-  <option>ME</option>
-  <option>MD</option>
-  <option>MA</option>
-  <option>MI</option>
-  <option>MN</option>
-  <option>MS</option>
-  <option>MO</option>
-  <option>MT</option>
-  <option>NE</option>
-  <option>NV</option>
-  <option>NH</option>
-  <option>NJ</option>
-  <option>NM</option>
-  <option>NY</option>
-  <option>NC</option>
-  <option>ND</option>
-  <option>OH</option>
-  <option>OK</option>
-  <option>OR</option>
-  <option>PA</option>
-  <option>PR</option>
-  <option>RI</option>
-  <option>SC</option>
-  <option>SD</option>
-  <option>TN</option>
-  <option>TX</option>
-  <option>UT</option>
-  <option>VT</option>
-  <option>VA</option>
-  <option>WA</option>
-  <option>WV</option>
-  <option>WI</option>
-  <option>WY</option>
-</select>
-<input type="text" maxlength="10">
-</td>
-</tr>
+                    <select>
+                        <option value="">Select State</option>
+                        <option>AL</option>
+                        <option>AK</option>
+                        <option>AZ</option>
+                        <option>AR</option>
+                        <option>CA</option>
+                        <option>CO</option>
+                        <option>CT</option>
+                        <option>DE</option>
+                        <option>DC</option>
+                        <option>FL</option>
+                        <option>GA</option>
+                        <option>HI</option>
+                        <option>ID</option>
+                        <option>IL</option>
+                        <option>IN</option>
+                        <option>IA</option>
+                        <option>KS</option>
+                        <option>KY</option>
+                        <option>LA</option>
+                        <option>ME</option>
+                        <option>MD</option>
+                        <option>MA</option>
+                        <option>MI</option>
+                        <option>MN</option>
+                        <option>MS</option>
+                        <option>MO</option>
+                        <option>MT</option>
+                        <option>NE</option>
+                        <option>NV</option>
+                        <option>NH</option>
+                        <option>NJ</option>
+                        <option>NM</option>
+                        <option>NY</option>
+                        <option>NC</option>
+                        <option>ND</option>
+                        <option>OH</option>
+                        <option>OK</option>
+                        <option>OR</option>
+                        <option>PA</option>
+                        <option>PR</option>
+                        <option>RI</option>
+                        <option>SC</option>
+                        <option>SD</option>
+                        <option>TN</option>
+                        <option>TX</option>
+                        <option>UT</option>
+                        <option>VT</option>
+                        <option>VA</option>
+                        <option>WA</option>
+                        <option>WV</option>
+                        <option>WI</option>
+                        <option>WY</option>
+                    </select>
 
-<tr>
-<td>Email</td>
-<td><input type="email"></td>
-</tr>
+                    <input type="text" maxlength="10">
+                </td>
+            </tr>
 
-<tr>
-<td>User ID</td>
-<td><input type="text" maxlength="20"></td>
-</tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email">
+                </td>
+            </tr>
 
-<tr>
-<td>Password</td>
-<td>
-<input type="password"><br>
-<input type="password">
-</td>
-</tr>
+            <tr>
+                <td>User ID</td>
+                <td>
+                    <input type="text" maxlength="20">
+                </td>
+            </tr>
 
-<tr>
-<td>Gender</td>
-<td>
-<input type="radio"> Male
-<input type="radio"> Female
-<input type="radio"> Other
-</td>
-</tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password"><br>
+                    <input type="password">
+                </td>
+            </tr>
 
-<tr>
-<td>Vaccinated</td>
-<td>
-<input type="radio"> Yes
-<input type="radio"> No
-</td>
-</tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio"> Male
+                    <input type="radio"> Female
+                    <input type="radio"> Other
+                </td>
+            </tr>
 
-<tr>
-<td>Insurance</td>
-<td>
-<input type="radio"> Yes
-<input type="radio"> No
-</td>
-</tr>
+            <tr>
+                <td>Vaccinated</td>
+                <td>
+                    <input type="radio"> Yes
+                    <input type="radio"> No
+                </td>
+            </tr>
 
-<tr>
-<td>Medical History</td>
-<td>
-<input type="checkbox"> Chicken Pox
-<input type="checkbox"> Measles
-<input type="checkbox"> Covid
-<input type="checkbox"> Tetanus
-<input type="checkbox"> Flu
-</td>
-</tr>
+            <tr>
+                <td>Insurance</td>
+                <td>
+                    <input type="radio"> Yes
+                    <input type="radio"> No
+                </td>
+            </tr>
 
-<tr>
-<td>Health Rating</td>
-<td><input type="range" min="1" max="10"></td>
-</tr>
+            <tr>
+                <td>Medical History</td>
+                <td>
+                    <input type="checkbox"> Chicken Pox
+                    <input type="checkbox"> Measles
+                    <input type="checkbox"> Covid
+                    <input type="checkbox"> Tetanus
+                    <input type="checkbox"> Flu
+                </td>
+            </tr>
 
-<tr>
-<td>Symptoms</td>
-<td><textarea rows="3" cols="50"></textarea></td>
-</tr>
+            <tr>
+                <td>Health Rating</td>
+                <td>
+                    <input type="range" min="1" max="10">
+                </td>
+            </tr>
 
-<tr>
-<td colspan="2" align="center">
-<input type="reset" value="CLEAR AND START OVER">
-<input type="submit" value="Submit">
-</td>
-</tr>
+            <tr>
+                <td>Symptoms</td>
+                <td>
+                    <textarea rows="3" cols="50"></textarea>
+                </td>
+            </tr>
 
-</table>
-</form>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="CLEAR AND START OVER">
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
 
-<div id="footer">
-<button>Contact Us</button>
-<p>Magic Myles Medical | Sandy Hills TX</p>
-</div>
+        </table>
+    </form>
+
+    <div id="footer">
+        <button>Contact Us</button>
+        <p>Magic Myles Medical | Sandy Hills TX</p>
+    </div>
 
 </body>
 </html>
