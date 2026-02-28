@@ -2,7 +2,7 @@
 Program name: style.css
 Author: Myles Carpenter
 Date created: 02/02/2026
-Date last edited: 02/09/2026
+Date last edited: 02/26/2026
 Version: 1.0
 Description: External CSS for patient registration form.
 */
@@ -25,6 +25,8 @@ body {
 
 table {
   margin: auto;
+  width: 80%;
+  max-width: 800px;
   background-color: white;
   padding: 15px;
   border: 1px solid #ccc;
@@ -32,6 +34,28 @@ table {
 
 td {
   padding: 6px;
+}
+
+td:first-child {
+  font-weight: bold;
+  width: 180px;
+  vertical-align: top;
+}
+
+input,
+select,
+textarea {
+  margin: 5px 5px 5px 0;
+  padding: 4px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 4px;
+}
+
+textarea {
+  resize: none;
 }
 
 #footer {
