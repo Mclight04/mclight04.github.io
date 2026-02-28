@@ -56,12 +56,6 @@ textarea {
   padding: 4px;
 }
 
-/* Fix Name Row Wrapping */
-
-input[type="text"] {
-  width: 140px;
-}
-
 input[maxlength="1"] {
   width: 40px;
 }
@@ -87,4 +81,16 @@ textarea {
   text-align: center;
   padding: 10px;
   margin-top: 20px;
+}
+
+.name-row {
+  white-space: nowrap;
+}
+
+.name-row input[type="text"] {
+  width: 120px;
+}
+
+.name-row input[maxlength="1"] {
+  width: 40px;
 }
