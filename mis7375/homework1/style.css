@@ -12,6 +12,8 @@ body {
   font-family: Georgia, serif;
 }
 
+/* Header Section */
+
 #header {
   background-color: #2b4c7e;
   color: white;
@@ -21,7 +23,10 @@ body {
 
 #logo {
   width: 80px;
+  margin-bottom: 8px;
 }
+
+/* Form Table Layout */
 
 table {
   margin: auto;
@@ -38,9 +43,11 @@ td {
 
 td:first-child {
   font-weight: bold;
-  width: 180px;
+  width: 140px;
   vertical-align: top;
 }
+
+/* Input Styling */
 
 input,
 select,
@@ -49,14 +56,30 @@ textarea {
   padding: 4px;
 }
 
+/* Fix Name Row Wrapping */
+
+input[type="text"] {
+  width: 140px;
+}
+
+input[maxlength="1"] {
+  width: 40px;
+}
+
+/* Radio & Checkbox Spacing */
+
 input[type="radio"],
 input[type="checkbox"] {
   margin-right: 4px;
 }
 
+/* Textarea */
+
 textarea {
   resize: none;
 }
+
+/* Footer */
 
 #footer {
   background-color: #2b4c7e;
