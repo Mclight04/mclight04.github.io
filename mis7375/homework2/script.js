@@ -1,10 +1,10 @@
 /*
 Program name: script.js
 Author: Myles Carpenter
-Date created: 03/27/2026
+Date created: 03/20/2026
 Date last edited: 03/27/2026
 Version: 2.0
-Description: External JavaScript for patient registration form review and validation.
+Description: External JavaScript for form review and validation.
 */
 
 function showDate() {
@@ -15,6 +15,7 @@ function showDate() {
 function setDateLimits() {
     var dobField = document.getElementById("dob");
     var today = new Date();
+
     var maxDate = today.toISOString().split("T")[0];
 
     var minDateObj = new Date();
@@ -35,24 +36,24 @@ function forceLowercaseUserId() {
     userIdField.value = userIdField.value.toLowerCase();
 }
 
-function getCheckedHistory() {
-    var checked = [];
-    var historyBoxes = document.querySelectorAll('input[name="history"]:checked');
-
-    historyBoxes.forEach(function(box) {
-        checked.push(box.value);
-    });
-
-    if (checked.length === 0) {
-        return "None selected";
-    }
-
-    return checked.join(", ");
-}
-
 function getSelectedValue(name) {
     var selected = document.querySelector('input[name="' + name + '"]:checked');
     return selected ? selected.value : "";
+}
+
+function getCheckedHistory() {
+    var checkedBoxes = document.querySelectorAll('input[name="history"]:checked');
+    var selectedHistory = [];
+
+    checkedBoxes.forEach(function(box) {
+        selectedHistory.push(box.value);
+    });
+
+    if (selectedHistory.length === 0) {
+        return "None selected";
+    }
+
+    return selectedHistory.join(", ");
 }
 
 function validatePasswords() {
@@ -69,12 +70,12 @@ function validatePasswords() {
     }
 
     if (passwordLower === userId) {
-        alert("Password cannot equal your User ID.");
+        alert("Password cannot equal your user ID.");
         return false;
     }
 
     if (userId !== "" && passwordLower.includes(userId)) {
-        alert("Password cannot contain your User ID.");
+        alert("Password cannot contain your user ID.");
         return false;
     }
 
@@ -107,7 +108,7 @@ function reviewForm() {
     var middleInitial = document.getElementById("middleInitial").value;
     var lastName = document.getElementById("lastName").value;
     var dob = document.getElementById("dob").value;
-    var idNumber = document.getElementById("idNumber").value;
+    var ssn = document.getElementById("ssn").value;
     var email = document.getElementById("email").value;
     var phone = document.getElementById("phone").value;
     var addr1 = document.getElementById("addr1").value;
@@ -115,29 +116,29 @@ function reviewForm() {
     var city = document.getElementById("city").value;
     var state = document.getElementById("state").value;
     var zip = document.getElementById("zip").value.substring(0, 10);
+    var userId = document.getElementById("userId").value;
     var gender = getSelectedValue("gender");
     var vaccinated = getSelectedValue("vaccinated");
     var insurance = getSelectedValue("insurance");
-    var history = getCheckedHistory();
     var healthRating = document.getElementById("healthRating").value;
     var symptoms = document.getElementById("symptoms").value;
-    var userId = document.getElementById("userId").value;
+    var history = getCheckedHistory();
     var password = document.getElementById("password").value;
 
     var reviewHTML = ""
         + "<p><strong>Name:</strong> " + firstName + " " + middleInitial + " " + lastName + "</p>"
         + "<p><strong>Date of Birth:</strong> " + dob + "</p>"
-        + "<p><strong>ID Number:</strong> " + idNumber + "</p>"
+        + "<p><strong>Social Security / ID:</strong> " + ssn + "</p>"
         + "<p><strong>Email:</strong> " + email + "</p>"
         + "<p><strong>Phone:</strong> " + phone + "</p>"
         + "<p><strong>Address:</strong> " + addr1 + "<br>" + addr2 + "<br>" + city + ", " + state + " " + zip + "</p>"
+        + "<p><strong>User ID:</strong> " + userId + "</p>"
         + "<p><strong>Gender:</strong> " + gender + "</p>"
         + "<p><strong>Vaccinated:</strong> " + vaccinated + "</p>"
         + "<p><strong>Insurance:</strong> " + insurance + "</p>"
         + "<p><strong>Medical History:</strong> " + history + "</p>"
         + "<p><strong>Health Rating:</strong> " + healthRating + "</p>"
         + "<p><strong>Symptoms:</strong> " + symptoms + "</p>"
-        + "<p><strong>User ID:</strong> " + userId + "</p>"
         + "<p><strong>Password:</strong> " + password + "</p>";
 
     document.getElementById("reviewContent").innerHTML = reviewHTML;
