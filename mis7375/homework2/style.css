@@ -1,3 +1,4 @@
+/*
 Program name: style.css
 Author: Myles Carpenter
 Date created: 02/02/2026
@@ -7,95 +8,109 @@ Description: External CSS for patient registration form.
 */
 
 body {
-    background-color: #eef2f6;
-    font-family: Georgia, serif;
+  background-color: #eef2f6;
+  font-family: Georgia, serif;
 }
 
+/* Header Section */
+
 #header {
-    background-color: #2b4c7e;
-    color: white;
-    text-align: center;
-    padding: 15px;
+  background-color: #2b4c7e;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 #logo {
-    width: 180px;
-    margin-bottom: 8px;
+  width: 180px;
+  margin-bottom: 8px;
 }
 
+/* Form Table Layout */
+
 table {
-    margin: auto;
-    width: 80%;
-    max-width: 850px;
-    background-color: white;
-    padding: 15px;
-    border: 1px solid #ccc;
+  margin: auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
 }
 
 td {
-    padding: 6px;
+  padding: 6px;
 }
 
 td:first-child {
-    font-weight: bold;
-    width: 160px;
-    vertical-align: top;
+  font-weight: bold;
+  width: 140px;
+  vertical-align: top;
 }
+
+/* Input Styling */
 
 input,
 select,
 textarea {
-    margin: 5px 5px 5px 0;
-    padding: 4px;
+  margin: 5px 5px 5px 0;
+  padding: 4px;
 }
 
 input[maxlength="1"] {
-    width: 40px;
+  width: 40px;
 }
+
+/* Radio & Checkbox Spacing */
 
 input[type="radio"],
 input[type="checkbox"] {
-    margin-right: 4px;
+  margin-right: 4px;
 }
 
+/* Textarea */
+
 textarea {
-    resize: none;
+  resize: none;
+}
+
+/* Footer */
+
+#footer {
+  background-color: #2b4c7e;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 .name-row {
-    white-space: nowrap;
+  white-space: nowrap;
 }
 
 .name-row input[type="text"] {
-    width: 120px;
+  width: 120px;
 }
 
 .name-row input[maxlength="1"] {
-    width: 40px;
+  width: 40px;
 }
 
+/* Review Section */
+
 #reviewSection {
-    width: 80%;
-    max-width: 850px;
-    margin: 20px auto;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 15px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 800px;
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ccc;
 }
 
 #reviewSection h2 {
-    margin-top: 0;
-    text-align: center;
+  text-align: center;
+  margin-top: 0;
 }
 
 #reviewContent p {
-    margin: 8px 0;
-}
-
-#footer {
-    background-color: #2b4c7e;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 20px;
+  margin: 8px 0;
 }
