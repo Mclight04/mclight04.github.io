@@ -1,0 +1,101 @@
+Program name: style.css
+Author: Myles Carpenter
+Date created: 02/02/2026
+Date last edited: 03/27/2026
+Version: 2.0
+Description: External CSS for patient registration form.
+*/
+
+body {
+    background-color: #eef2f6;
+    font-family: Georgia, serif;
+}
+
+#header {
+    background-color: #2b4c7e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+#logo {
+    width: 180px;
+    margin-bottom: 8px;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+    max-width: 850px;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+td {
+    padding: 6px;
+}
+
+td:first-child {
+    font-weight: bold;
+    width: 160px;
+    vertical-align: top;
+}
+
+input,
+select,
+textarea {
+    margin: 5px 5px 5px 0;
+    padding: 4px;
+}
+
+input[maxlength="1"] {
+    width: 40px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 4px;
+}
+
+textarea {
+    resize: none;
+}
+
+.name-row {
+    white-space: nowrap;
+}
+
+.name-row input[type="text"] {
+    width: 120px;
+}
+
+.name-row input[maxlength="1"] {
+    width: 40px;
+}
+
+#reviewSection {
+    width: 80%;
+    max-width: 850px;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+#reviewSection h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+#reviewContent p {
+    margin: 8px 0;
+}
+
+#footer {
+    background-color: #2b4c7e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
