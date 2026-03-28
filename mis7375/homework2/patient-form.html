@@ -5,7 +5,7 @@
     Date created: 02/02/2026
     Date last edited: 03/27/2026
     Version: 2.0
-    Description: Patient registration form with review section and validation.
+    Description: Patient registration form for a medical website with review and validation.
 -->
 <html lang="en">
 <head>
@@ -32,7 +32,7 @@
                     <label for="firstName">First</label>
                     <input type="text" id="firstName" name="firstName" maxlength="30" minlength="1"
                         pattern="[A-Za-z'-]{1,30}"
-                        title="First name must be 1 to 30 characters and contain letters, apostrophes, or dashes only."
+                        title="First name must be 1 to 30 characters and use letters, apostrophes, or dashes only."
                         required>
 
                     <label for="middleInitial">MI</label>
@@ -43,7 +43,7 @@
                     <label for="lastName">Last</label>
                     <input type="text" id="lastName" name="lastName" maxlength="30" minlength="1"
                         pattern="[A-Za-z0-9'-]{1,30}"
-                        title="Last name must be 1 to 30 characters and can include letters, apostrophes, dashes, or numbers."
+                        title="Last name must be 1 to 30 characters and can use letters, apostrophes, dashes, or numbers."
                         required>
                 </td>
             </tr>
@@ -52,17 +52,17 @@
                 <td>Date of Birth</td>
                 <td>
                     <input type="date" id="dob" name="dob"
-                        title="Enter your date of birth. It cannot be in the future or more than 120 years ago."
+                        title="Choose a birth date. It cannot be in the future or more than 120 years ago."
                         required>
                 </td>
             </tr>
 
             <tr>
-                <td>ID Number</td>
+                <td>Social Security</td>
                 <td>
-                    <input type="password" id="idNumber" name="idNumber" maxlength="11"
+                    <input type="password" id="ssn" name="ssn" maxlength="11"
                         pattern="^\d{3}-?\d{2}-?\d{4}$"
-                        title="Enter a 9 digit ID number, with or without dashes."
+                        title="Enter 9 digits, with or without dashes."
                         required>
                 </td>
             </tr>
@@ -71,7 +71,7 @@
                 <td>Email</td>
                 <td>
                     <input type="email" id="email" name="email"
-                        title="Enter a valid email in the format name@domain.tld."
+                        title="Enter a valid email address in the format name@domain.tld."
                         required>
                 </td>
             </tr>
@@ -106,29 +106,91 @@
                         title="City must be 2 to 30 characters."
                         required>
 
-                    <select id="state" name="state"
-                        title="Choose a valid state."
-                        required>
+                    <select id="state" name="state" title="Select a valid state." required>
                         <option value="">Select State</option>
-                        <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
-                        <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
-                        <option>DC</option><option>FL</option><option>GA</option><option>HI</option>
-                        <option>ID</option><option>IL</option><option>IN</option><option>IA</option>
-                        <option>KS</option><option>KY</option><option>LA</option><option>ME</option>
-                        <option>MD</option><option>MA</option><option>MI</option><option>MN</option>
-                        <option>MS</option><option>MO</option><option>MT</option><option>NE</option>
-                        <option>NV</option><option>NH</option><option>NJ</option><option>NM</option>
-                        <option>NY</option><option>NC</option><option>ND</option><option>OH</option>
-                        <option>OK</option><option>OR</option><option>PA</option><option>PR</option>
-                        <option>RI</option><option>SC</option><option>SD</option><option>TN</option>
-                        <option>TX</option><option>UT</option><option>VT</option><option>VA</option>
-                        <option>WA</option><option>WV</option><option>WI</option><option>WY</option>
+                        <option>AL</option>
+                        <option>AK</option>
+                        <option>AZ</option>
+                        <option>AR</option>
+                        <option>CA</option>
+                        <option>CO</option>
+                        <option>CT</option>
+                        <option>DE</option>
+                        <option>DC</option>
+                        <option>FL</option>
+                        <option>GA</option>
+                        <option>HI</option>
+                        <option>ID</option>
+                        <option>IL</option>
+                        <option>IN</option>
+                        <option>IA</option>
+                        <option>KS</option>
+                        <option>KY</option>
+                        <option>LA</option>
+                        <option>ME</option>
+                        <option>MD</option>
+                        <option>MA</option>
+                        <option>MI</option>
+                        <option>MN</option>
+                        <option>MS</option>
+                        <option>MO</option>
+                        <option>MT</option>
+                        <option>NE</option>
+                        <option>NV</option>
+                        <option>NH</option>
+                        <option>NJ</option>
+                        <option>NM</option>
+                        <option>NY</option>
+                        <option>NC</option>
+                        <option>ND</option>
+                        <option>OH</option>
+                        <option>OK</option>
+                        <option>OR</option>
+                        <option>PA</option>
+                        <option>PR</option>
+                        <option>RI</option>
+                        <option>SC</option>
+                        <option>SD</option>
+                        <option>TN</option>
+                        <option>TX</option>
+                        <option>UT</option>
+                        <option>VT</option>
+                        <option>VA</option>
+                        <option>WA</option>
+                        <option>WV</option>
+                        <option>WI</option>
+                        <option>WY</option>
                     </select>
 
                     <input type="text" id="zip" name="zip" maxlength="10"
                         pattern="^\d{5}(-\d{4})?$"
                         placeholder="12345 or 12345-6789"
-                        title="Enter a 5 digit zip code or zip plus 4."
+                        title="Enter a 5 digit zip or zip plus 4."
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>User ID</td>
+                <td>
+                    <input type="text" id="userId" name="userId" maxlength="30" minlength="5"
+                        pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
+                        title="User ID must be 5 to 30 characters, start with a letter, contain no spaces, and use only letters, numbers, underscores, or dashes."
+                        oninput="forceLowercaseUserId()"
+                        required>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" id="password" name="password" maxlength="30" minlength="8"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#%^&*()\-_=+\\\/><.,`~]).{8,30}$"
+                        title="Password must be 8 to 30 characters and include an uppercase letter, lowercase letter, number, and special character. Do not use quotes."
+                        required><br>
+
+                    <input type="password" id="confirmPassword" name="confirmPassword" maxlength="30" minlength="8"
+                        title="Re enter the same password."
                         required>
                 </td>
             </tr>
@@ -178,8 +240,8 @@
                     <input type="checkbox" id="measles" name="history" value="Measles">
                     <label for="measles">Measles</label>
 
-                    <input type="checkbox" id="covid19" name="history" value="Covid-19">
-                    <label for="covid19">Covid-19</label>
+                    <input type="checkbox" id="covid" name="history" value="Covid-19">
+                    <label for="covid">Covid-19</label>
 
                     <input type="checkbox" id="tetanus" name="history" value="Tetanus">
                     <label for="tetanus">Tetanus</label>
@@ -194,7 +256,7 @@
                 <td>
                     <input type="range" id="healthRating" name="healthRating" min="1" max="10" value="5"
                         oninput="updateHealthValue()"
-                        title="Slide from 1 to 10 to rate your health.">
+                        title="Move the slider to rate your health from 1 to 10.">
                     <span id="healthValue">5</span>
                 </td>
             </tr>
@@ -203,32 +265,7 @@
                 <td>Symptoms</td>
                 <td>
                     <textarea id="symptoms" name="symptoms" rows="3" cols="50"
-                        title="Optional. Describe your symptoms."></textarea>
-                </td>
-            </tr>
-
-            <tr>
-                <td>User ID</td>
-                <td>
-                    <input type="text" id="userId" name="userId" maxlength="30" minlength="5"
-                        pattern="^[A-Za-z][A-Za-z0-9_-]{4,29}$"
-                        title="User ID must be 5 to 30 characters, start with a letter, contain no spaces, and only use letters, numbers, underscores, or dashes."
-                        oninput="forceLowercaseUserId()"
-                        required>
-                </td>
-            </tr>
-
-            <tr>
-                <td>Password</td>
-                <td>
-                    <input type="password" id="password" name="password" maxlength="30" minlength="8"
-                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#%^&*()\-_=+\\\/><.,`~])(?!.*&quot;).{8,30}$"
-                        title="Password must be 8 to 30 characters and include an uppercase letter, lowercase letter, number, and special character. Do not use quotes."
-                        required><br>
-
-                    <input type="password" id="confirmPassword" name="confirmPassword" maxlength="30" minlength="8"
-                        title="Re enter the same password."
-                        required>
+                        title="Optional. Describe your current symptoms."></textarea>
                 </td>
             </tr>
 
@@ -236,7 +273,7 @@
                 <td colspan="2" align="center">
                     <input type="button" value="Review" onclick="reviewForm()">
                     <input type="submit" value="Submit">
-                    <input type="reset" value="START OVER" onclick="clearReview()">
+                    <input type="reset" value="CLEAR AND START OVER" onclick="clearReview()">
                 </td>
             </tr>
 
