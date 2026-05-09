@@ -139,3 +139,13 @@ textarea {
   left: 0;
   width: 100%;
 }
+
+.thankyouBox {
+  text-align: center;
+  padding: 40px;
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  margin: 30px auto;
+  border: 1px solid #ccc;
+}
